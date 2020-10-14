@@ -16,12 +16,8 @@ const forecast = (latitude, longitude, callback) =>{
         } else if(list.length === 0){
             callback('Unable to find the forcast! try another search')
         } else{
-            callback(undefined, list[0].weather[0].description + '. It is currently '+ list[0].main.temp_max + ' degrees. '+'There is a '+ list[0].clouds.all +'% chance of rain.')
-                // location: list[0].name,
-            //     temprature: response.body.list[0].main.temp_max,
-            //     description: response.body.list[0].weather[0].description,
-            //     rain: response.body.list[0].clouds.all                
-            // })
+            callback(undefined, list[0].weather[0].description + '. It is currently '+ list[0].main.temp_max + ' degrees. '+'There is a '+ list[0].clouds.all +'% chance of rain. Humidity: '+list[0].main.humidity)
+
         }
 
 
